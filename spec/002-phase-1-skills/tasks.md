@@ -122,20 +122,20 @@ These two skills must work correctly before any analytical work can be validated
 ## Phase 6 — 10th & 11th Analytical Skills _(~4 hours)_
 
 ### `net-worth-tracker`
-- [ ] Write `.claude/commands/net-worth-tracker.md`
-- [ ] Analysis framework must: compute net worth (total assets − total liabilities), break down by category (liquid / invested / real estate / debt), compare MoM/QoQ if prior snapshot exists in `data/snapshots/`, compare against FI benchmarks (1× salary by 30, 3× by 40, 10× by 60)
-- [ ] Output must include: net worth summary, composition breakdown table, trend delta if prior data available, benchmark comparisons, Mermaid `xychart-beta` line of net worth over time (if ≥2 snapshots) + `pie` of asset composition
-- [ ] `allowed-tools` must include `Read` to access prior snapshots for trend calculation
-- [ ] Test: create two snapshots 3 months apart with different balances; verify MoM/QoQ delta is computed correctly; verify benchmark comparisons are appropriate to the user's age/income
+- [x] Write `.claude/commands/net-worth-tracker.md`
+- [x] Analysis framework must: compute net worth (total assets − total liabilities), break down by category (liquid / invested / real estate / debt), compare MoM/QoQ if prior snapshot exists in `data/snapshots/`, compare against FI benchmarks (1× salary by 30, 3× by 40, 10× by 60)
+- [x] Output must include: net worth summary, composition breakdown table, trend delta if prior data available, benchmark comparisons, Mermaid `xychart-beta` line of net worth over time (if ≥2 snapshots) + `pie` of asset composition
+- [x] `allowed-tools` must include `Read` to access prior snapshots for trend calculation
+- [x] Test: create two snapshots 3 months apart with different balances; verify MoM/QoQ delta is computed correctly; verify benchmark comparisons are appropriate to the user's age/income
 
 ### `financial-health-score`
-- [ ] Write `.claude/commands/financial-health-score.md`
-- [ ] Analysis framework must: score 6 dimensions on 0–100 scale — liquidity (EF months coverage), debt health (DTI + absence of high-rate revolving debt), savings rate (net savings % of gross), investment diversification (allocation drift), goal progress (% of goals on track), tax efficiency (% of contribution headroom utilized)
-- [ ] Output must include: scorecard table (dimension / score / status / key metric driving score), bottom 2–3 dimensions explained, recommended session plan (which skills to run in priority order), Mermaid `xychart-beta` bar of scores per dimension
-- [ ] Skill should be usable as a session opener: output must tell the user exactly which skill to run next
-- [ ] If prior snapshot exists, show score delta per dimension (trend)
-- [ ] `allowed-tools` must include `Read` to access prior snapshot for trend comparison
-- [ ] Test: construct a snapshot with a weak savings rate and overdrawn emergency fund; verify those two dimensions score lowest and appear as the recommended priorities; verify the recommended next skills are `financial-snapshot` (to update) and `budget-diagnosis`
+- [x] Write `.claude/commands/financial-health-score.md`
+- [x] Analysis framework must: score 6 dimensions on 0–100 scale — liquidity (EF months coverage), debt health (DTI + absence of high-rate revolving debt), savings rate (net savings % of gross), investment diversification (allocation drift), goal progress (% of goals on track), tax efficiency (% of contribution headroom utilized)
+- [x] Output must include: scorecard table (dimension / score / status / key metric driving score), bottom 2–3 dimensions explained, recommended session plan (which skills to run in priority order), Mermaid `xychart-beta` bar of scores per dimension
+- [x] Skill should be usable as a session opener: output must tell the user exactly which skill to run next
+- [x] If prior snapshot exists, show score delta per dimension (trend)
+- [x] `allowed-tools` must include `Read` to access prior snapshot for trend comparison
+- [x] Test: construct a snapshot with a weak savings rate and overdrawn emergency fund; verify those two dimensions score lowest and appear as the recommended priorities; verify the recommended next skills are `financial-snapshot` (to update) and `budget-diagnosis`
 
 ---
 

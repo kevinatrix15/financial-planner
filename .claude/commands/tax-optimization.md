@@ -25,7 +25,7 @@ Identify the current quarter (Q1–Q4) to determine whether year-end deadline it
 
 For each tax-advantaged account, compute:
 - **Personal remaining headroom** = personal limit − YTD contributed
-- **Combined remaining headroom** (401k) = $70,000 combined limit − (employee YTD + employer YTD)
+- **Combined remaining headroom** (401k) = $72,000 combined limit − (employee YTD + employer YTD)
 - **Months remaining in tax year** = 12 − current month
 - **Monthly contribution needed to max out** = remaining headroom ÷ months remaining
 
@@ -89,9 +89,9 @@ Bold at top: total remaining tax-advantaged headroom (all accounts combined), es
 
 | Account | YTD Contributed | Personal Limit | Remaining | Mo. to Max | Status |
 |---------|-----------------|----------------|-----------|------------|--------|
-| 401k | $X | $23,500 | $X | $X/mo | ✓/⚠/🔴 |
-| Roth IRA | $X | $7,000 | $X | $X/mo | |
-| HSA | $X | $8,550 | $X | $X/mo | |
+| 401k | $X | $24,500 | $X | $X/mo | ✓/⚠/🔴 |
+| Roth IRA | $X | $7,500 | $X | $X/mo | |
+| HSA | $X | $8,750 | $X | $X/mo | |
 | 529 | $X | $19,000 gift | $X | | |
 
 ### Tax-Saving Opportunities (Ranked by Dollar Impact)

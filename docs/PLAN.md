@@ -192,3 +192,25 @@ The `financial-snapshot` skill establishes the canonical input format used acros
 > `financial-snapshot` → `quarterly-strategy` → `scenario-compare`
 >
 > Once skills are drafted, run a real session against actual financial data to validate and iterate.
+
+---
+
+## TODOs:
+
+- [ ] Optimize for car down-payment amount
+- [ ] Change data entry format to .xlsx or .csv files for more natural copy/paste
+- [ ] Update template snapshot with all budget categories, etc. for consistency
+- [ ] Capture notes mapping each entry with source for future data-layer fetching
+- [ ] Add skills for market analyst- evaluate current stock positions to decide hold | sell | buy, identify other stocks / sectors of interest
+- [ ] Find somewhere secure to back up snapshots, plan.md, etc.
+- [ ] 
+
+---
+
+## Planning Questions / Goals:
+
+- [ ] How to account for RSUs? Approximate current & future values
+- [ ] How much additional HYSA savings to put into market? Do something else with?
+- [ ] How to best use increased earnings from FY26 raise?
+- [ ] Optimize for 529s vs. retirement - supporting adult children
+

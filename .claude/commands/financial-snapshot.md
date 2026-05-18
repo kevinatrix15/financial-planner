@@ -149,9 +149,9 @@ Ask the user to fill in all sections. They can paste the filled template directl
 
 | Account          | YTD Contributed | Personal Limit | Employer Limit | Remaining |
 |------------------|-----------------|----------------|----------------|-----------|
-| 401k (all types) | $               | $23,500        | $70,000 total  | $         |
-| Roth IRA         | $               | $7,000         | N/A            | $         |
-| HSA (family)     | $               | $8,550         | $              | $         |
+| 401k (all types) | $               | $24,500        | $72,000 total  | $         |
+| Roth IRA         | $               | $7,500         | N/A            | $         |
+| HSA (family)     | $               | $8,750         | $              | $         |
 
 ---
 
