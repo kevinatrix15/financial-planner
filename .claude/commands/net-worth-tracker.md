@@ -19,6 +19,8 @@ For trend analysis, also say "read prior" — the skill will look for the previo
 
 Use Read tool to load the most recent snapshot from `data/snapshots/`. If trend is requested, also read the previous snapshot (second-most-recent file in the directory, or the one from ~3 months ago for QoQ).
 
+Check the most recent snapshot's **Last updated** date — if it is older than 90 days, warn: "⚠ This snapshot is X days old; balances may be stale. Consider running `/financial-snapshot` to refresh before relying on this analysis."
+
 Extract: all asset balances (liquid, tax-advantaged investments, taxable investments, real assets) and all liability balances.
 
 ## Step 2 — Compute Net Worth
@@ -131,6 +133,10 @@ xychart-beta
     y-axis "Net Worth ($)" [min] --> [max]
     line [net_worth_values]
 ```
+
+### Action List
+
+Close with a numbered, prioritized action list — concrete next steps (e.g., "save this snapshot to keep the trend line going", "review allocation if investment NW is the largest component", "target $X/mo to close the gap to your age benchmark"). Each item should name a specific number, account, or skill where applicable.
 
 ## Handoffs
 - `/financial-health-score` — for a full cross-dimensional assessment of where to focus next

@@ -114,6 +114,10 @@ After the recommendation, offer specific parameter variations the user can ask a
 
 When the user asks a variation, re-run the relevant calculation and show only what changed — don't repeat the full output.
 
+### Action List
+
+Close with a numbered, prioritized action list — the concrete next steps to act on the recommendation (e.g., "1. Lock the rate quote by [date]", "2. Move $X from [account] to cover the down payment", "3. Re-run this comparison if [key assumption] changes"). Tie the steps to the recommended scenario.
+
 ## Handoffs
 - `/debt-strategy` — if the decision involves refinancing or new debt
 - `/goal-modeling` — if the decision significantly affects a goal timeline

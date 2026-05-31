@@ -21,6 +21,8 @@ Also provide (if not in snapshot):
 
 If "read latest", use Read tool to load from `data/snapshots/`. Extract the Goals table and Savings & Investment Contributions table.
 
+Check the snapshot's **Last updated** date — if it is older than 90 days, warn: "⚠ This snapshot is X days old; balances and contributions may be stale. Consider running `/financial-snapshot` to refresh before relying on this analysis."
+
 ## Step 2 — Project Each Goal
 
 For each goal, compute the projected completion date using the future value formula:

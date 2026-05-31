@@ -27,6 +27,8 @@ If bill due dates aren't known, ask before modeling — exact dates matter here.
 
 If "read latest", use Read tool to load from `data/snapshots/`. Extract Monthly Cash Flow fixed and variable expense amounts. Then ask the user to provide the timing details (due dates, paycheck dates) not captured in the snapshot.
 
+Check the snapshot's **Last updated** date — if it is older than 90 days, warn: "⚠ This snapshot is X days old; expense amounts may be stale. Consider running `/financial-snapshot` to refresh before relying on this analysis."
+
 ## Step 2 — Build the Monthly Cash Flow Calendar
 
 Lay out all cash events across a 4-week view (or full month):

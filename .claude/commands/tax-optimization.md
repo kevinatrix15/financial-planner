@@ -19,13 +19,15 @@ Also provide the current month/quarter — needed to flag time-sensitive year-en
 
 If "read latest", use Read tool to load from `data/snapshots/`. Extract Tax Context, YTD Contribution Headroom, and Investment Allocation sections.
 
+Check the snapshot's **Last updated** date — if it is older than 90 days, warn: "⚠ This snapshot is X days old; YTD contribution figures may be stale. Consider running `/financial-snapshot` to refresh before relying on this analysis."
+
 Identify the current quarter (Q1–Q4) to determine whether year-end deadline items apply.
 
 ## Step 2 — Contribution Headroom Analysis
 
-For each tax-advantaged account, compute:
-- **Personal remaining headroom** = personal limit − YTD contributed
-- **Combined remaining headroom** (401k) = $72,000 combined limit − (employee YTD + employer YTD)
+For each tax-advantaged account, compute (all limits read from the snapshot's YTD Headroom table — never hardcoded here):
+- **Personal remaining headroom** = personal limit (snapshot) − YTD contributed
+- **Combined remaining headroom** (401k) = combined employer limit (snapshot "Employer Limit" column) − (employee YTD + employer YTD)
 - **Months remaining in tax year** = 12 − current month
 - **Monthly contribution needed to max out** = remaining headroom ÷ months remaining
 
@@ -87,12 +89,14 @@ Bold at top: total remaining tax-advantaged headroom (all accounts combined), es
 
 ### Contribution Headroom Table
 
+Personal Limit values are taken verbatim from the snapshot's YTD Headroom table — do not substitute hardcoded figures.
+
 | Account | YTD Contributed | Personal Limit | Remaining | Mo. to Max | Status |
 |---------|-----------------|----------------|-----------|------------|--------|
-| 401k | $X | $24,500 | $X | $X/mo | ✓/⚠/🔴 |
-| Roth IRA | $X | $7,500 | $X | $X/mo | |
-| HSA | $X | $8,750 | $X | $X/mo | |
-| 529 | $X | $19,000 gift | $X | | |
+| 401k | $X | $[from snapshot] | $X | $X/mo | ✓/⚠/🔴 |
+| Roth IRA | $X | $[from snapshot] | $X | $X/mo | |
+| HSA | $X | $[from snapshot] | $X | $X/mo | |
+| 529 | $X | $[from snapshot] | $X | | |
 
 ### Tax-Saving Opportunities (Ranked by Dollar Impact)
 

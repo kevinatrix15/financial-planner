@@ -24,6 +24,8 @@ If actuals are missing for any category, ask whether to treat it as $0 or skip i
 
 If "read latest", use Read tool to load from `data/snapshots/`. Extract the Monthly Cash Flow section.
 
+Check the snapshot's **Last updated** date — if it is older than 90 days, warn: "⚠ This snapshot is X days old; budget and actuals may be stale. Consider running `/financial-snapshot` to refresh before relying on this analysis."
+
 Identify whether this is a prior-month review (full actuals) or a current-month check-in (partial actuals). If partial, note what fraction of the month has elapsed and adjust expectations accordingly.
 
 ## Step 2 — Compute Envelope Status
@@ -135,6 +137,10 @@ pie title Monthly Spending Composition
 ```
 
 Group minor categories into "Other" if they are each <5% of total spending.
+
+### Action List
+
+Close with a numbered, prioritized action list — the specific budget moves for next month in order (e.g., "1. Borrow $X from [donor envelope] to cover [overdrawn]", "2. Cut [category] to $X using [specific tactic]", "3. Move [rollover category]'s accumulated $X toward [purpose]"). Each item must name the category and dollar amount.
 
 ## Handoffs
 - `/cash-flow-optimizer` — if the net cash position is tight and bill timing is a factor

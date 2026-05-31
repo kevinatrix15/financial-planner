@@ -19,6 +19,8 @@ For trend comparison, also say "read prior" — the skill will load the previous
 
 If "read latest", use Read tool to load the most recent snapshot from `data/snapshots/`. If trend requested, also read the prior snapshot (second-most-recent file in the directory).
 
+Check the snapshot's **Last updated** date — if it is older than 90 days, warn: "⚠ This snapshot is X days old; scores may be based on stale figures. Consider running `/financial-snapshot` to refresh before relying on this analysis."
+
 Extract from snapshot:
 - **Liquid assets** (checking, savings, HYSA, money market)
 - **Monthly fixed + variable expenses** (total monthly spend)

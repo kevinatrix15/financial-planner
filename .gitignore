@@ -1,1 +1,6 @@
-data/
+# Financial data is never committed — EXCEPT the blank snapshot template,
+# which is intentionally version-controlled so the project ships with it.
+data/*
+!data/snapshots/
+data/snapshots/*
+!data/snapshots/template.md

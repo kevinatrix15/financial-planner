@@ -21,6 +21,8 @@ Also provide:
 
 If "read latest", use Read tool to load the most recent snapshot from `data/snapshots/`. Extract the Liabilities table and Monthly Cash Flow surplus.
 
+Check the snapshot's **Last updated** date — if it is older than 90 days, warn: "⚠ This snapshot is X days old; balances and rates may be stale. Consider running `/financial-snapshot` to refresh before relying on this analysis."
+
 If any debt is missing its rate or minimum payment, ask before proceeding.
 
 ## Step 2 — Build Debt Summary
@@ -108,6 +110,33 @@ gantt
     [Debt 2]   :active, [start], [payoff_date]
     [Debt 3]   :active, [start], [payoff_date]
 ```
+
+### ASCII Fallback (if Mermaid doesn't render)
+
+Total-balance trajectory — show the remaining total at a few milestones for each strategy:
+
+```
+Total Debt Balance Over Time
+Month     Avalanche    Snowball
+─────────────────────────────────
+Now       $XX,XXX      $XX,XXX
++6mo      $XX,XXX      $XX,XXX
++12mo     $XX,XXX      $XX,XXX
++24mo     $XX,XXX      $XX,XXX
+Debt-free month X        month Y
+```
+
+Per-debt payoff timeline (recommended strategy) — one bar per debt, shaded to its payoff date:
+
+```
+[Debt 1]  ████████░░░░░░░░  paid off YYYY-MM
+[Debt 2]  ████████████░░░░  paid off YYYY-MM
+[Debt 3]  ████████████████  paid off YYYY-MM
+```
+
+### Action List
+
+Close with a numbered, prioritized action list — the specific debt moves to make in order (e.g., "1. Direct the $X/mo surplus to [debt] (highest rate) starting [month]", "2. Call [biller] to request a refi quote", "3. Roll [debt 1]'s payment into [debt 2] once cleared"). Each item must name the debt, amount, and timing.
 
 ## Handoffs
 - `/scenario-compare` — if a refinancing opportunity is significant enough to model in detail

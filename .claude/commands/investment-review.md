@@ -21,6 +21,8 @@ Also confirm:
 
 If "read latest", use Read tool to load from `data/snapshots/`. Extract the Investment Allocation and Tax Context sections, plus the YTD Contribution Headroom table.
 
+Check the snapshot's **Last updated** date — if it is older than 90 days, warn: "⚠ This snapshot is X days old; balances and allocations may be stale. Consider running `/financial-snapshot` to refresh before relying on this analysis."
+
 ## Step 2 — Compute Blended Allocation
 
 Aggregate all accounts (401k, Roth IRA, HSA, brokerage, etc.) into a single blended portfolio view:
@@ -114,6 +116,10 @@ pie title Target Allocation
     "REITs" : value
     "Cash" : value
 ```
+
+### Action List
+
+Close with a numbered, prioritized action list — the specific rebalancing and contribution moves in order (e.g., "1. Redirect $X/mo of [account] contributions to [fund]", "2. Sell $X of [fund] in [tax-advantaged account], buy [fund]", "3. Route next-dollar contributions to [account] per the optimization plan"). Each item must name the account, fund, and amount.
 
 ## Handoffs
 - `/tax-optimization` — if contribution headroom analysis reveals significant unused space
